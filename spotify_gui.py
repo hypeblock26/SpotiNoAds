@@ -2,9 +2,11 @@ import ctypes
 import os
 import queue
 import re
+import shutil
 import subprocess
 import sys
 import threading
+import time
 from pathlib import Path
 
 import customtkinter as ctk
@@ -80,6 +82,49 @@ def oem_encoding():
         return "cp850"
 
 
+def clean_spotify(log):
+    subprocess.run(["taskkill", "/F", "/IM", "Spotify.exe"],
+                   capture_output=True, creationflags=NO_WINDOW)
+    time.sleep(1)
+
+    roaming = Path(os.environ["APPDATA"]) / "Spotify"
+    local = Path(os.environ["LOCALAPPDATA"]) / "Spotify"
+    uninstaller = roaming / "uninstall.exe"
+    exe = roaming / "Spotify.exe"
+
+    cmd = None
+    if uninstaller.exists():
+        cmd = [str(uninstaller), "/silent"]
+    elif exe.exists():
+        cmd = [str(exe), "/UNINSTALL", "/SILENT"]
+
+    if cmd:
+        log("Desinstalando Spotify...")
+        try:
+            subprocess.run(cmd, timeout=180, creationflags=NO_WINDOW)
+        except Exception as e:
+            log(f"Aviso al desinstalar: {e}")
+        time.sleep(3)
+        subprocess.run(["taskkill", "/F", "/IM", "Spotify.exe"],
+                       capture_output=True, creationflags=NO_WINDOW)
+        subprocess.run(["taskkill", "/F", "/IM", "SpotifyUninstall.exe"],
+                       capture_output=True, creationflags=NO_WINDOW)
+        time.sleep(1)
+    else:
+        log("No encontré un desinstalador de Spotify, borro las carpetas directamente.")
+
+    for folder in (roaming, local):
+        if folder.exists():
+            shutil.rmtree(folder, ignore_errors=True)
+
+    leftovers = [str(f) for f in (roaming, local) if f.exists()]
+    if leftovers:
+        log("No pude borrar: " + ", ".join(leftovers))
+        return False
+    log("Spotify eliminado por completo.")
+    return True
+
+
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -124,6 +169,10 @@ class App(ctk.CTk):
         self.vars["defender"] = ctk.BooleanVar()
         ctk.CTkCheckBox(sf, text="Agregar exclusiones a Defender (requiere abrir como administrador)",
                         variable=self.vars["defender"]).pack(anchor="w", padx=6, pady=3)
+
+        self.vars["clean"] = ctk.BooleanVar()
+        ctk.CTkCheckBox(sf, text="Reinstalación limpia: borrar Spotify por completo antes de instalar",
+                        variable=self.vars["clean"]).pack(anchor="w", padx=6, pady=3)
 
         row = ctk.CTkFrame(sf, fg_color="transparent")
         row.pack(fill="x", pady=(10, 2))
@@ -238,6 +287,12 @@ class App(ctk.CTk):
             "agregar exclusiones en Defender). Úsalo bajo tu propio riesgo.\n\n¿Continuar?",
         ):
             return
+        if self.vars["clean"].get() and not messagebox.askokcancel(
+            "Reinstalación limpia",
+            "Se desinstalará Spotify y se borrarán sus carpetas (ajustes, caché y descargas sin conexión).\n"
+            "Tendrás que iniciar sesión otra vez.\n\n¿Continuar?",
+        ):
+            return
         if self.vars["defender"].get() and not is_admin():
             self._log("Aviso: sin permisos de administrador no se agregan exclusiones a Defender.")
         self._set_busy(True)
@@ -245,6 +300,9 @@ class App(ctk.CTk):
 
     def _install_worker(self):
         try:
+            if self.vars["clean"].get() and not clean_spotify(self._log):
+                raise RuntimeError("No se pudo borrar Spotify. Ciérralo del todo e inténtalo de nuevo.")
+
             script = APP_DIR / "run.ps1"
             if not script.exists():
                 raise RuntimeError(f"No encuentro run.ps1 en {APP_DIR}")
