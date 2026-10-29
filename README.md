@@ -40,7 +40,6 @@
 - **Oculta podcasts, episodios y audiolibros** del inicio (opcional)
 - **Bloquea las actualizaciones automáticas** de Spotify (opcional)
 - **Presets listos** para instalar con un clic, y una pestaña avanzada para ajustar cada opción
-- **Preguntas en ventanas** de Sí/No, en vez de escribir `Y` o `N` en la consola
 - **Botón de restaurar** que deja Spotify como estaba
 
 <h1 id="instalacion">Instalación</h1>
