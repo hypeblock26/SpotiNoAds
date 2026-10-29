@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/aeec0ac3-3e4e-47bd-a3d7-a8774de211b0" width="360" alt="Soundwave Emblem" />
+  <img src="https://github.com/user-attachments/assets/aeec0ac3-3e4e-47bd-a3d7-a8774de211b0" width="240" alt="Soundwave Emblem" />
 </p>
 <h1 align="center">SpotiNoAds</h1>
 
