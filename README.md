@@ -4,8 +4,8 @@
 <h1 align="center">SpotiNoAds</h1>
 
 <p align="center">
-  A graphical interface to patch Spotify on Windows,<br/>
-  no terminal commands required.
+  A simple Spotify ad blocker for Windows.<br/>
+  Block ads and patch Spotify .
 </p>
 
 <p align="center">
