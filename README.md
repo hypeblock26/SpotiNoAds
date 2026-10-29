@@ -1,12 +1,6 @@
-
-
-<img width="1254" height="1254" alt="Slate Wave Emblem" src="https://github.com/user-attachments/assets/4976532e-f293-4acb-a533-61de9bfd1414" />
-
-
-
-
-
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/aeec0ac3-3e4e-47bd-a3d7-a8774de211b0" width="360" alt="Soundwave Emblem" />
+</p>
 <h1 align="center">SpotiNoAds</h1>
 
 <p align="center">
