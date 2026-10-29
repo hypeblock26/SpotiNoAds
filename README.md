@@ -1,9 +1,17 @@
 
+
+<img width="1254" height="1254" alt="Slate Wave Emblem" src="https://github.com/user-attachments/assets/4976532e-f293-4acb-a533-61de9bfd1414" />
+
+
+
+
+
+
 <h1 align="center">SpotiNoAds</h1>
 
 <p align="center">
-  Una interfaz gráfica para parchear Spotify en Windows,<br/>
-  sin escribir comandos en la terminal.
+  A graphical interface to patch Spotify on Windows,<br/>
+  no terminal commands required.
 </p>
 
 <p align="center">
@@ -20,49 +28,49 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/hypeblock26/SpotiNoAds/releases/latest/download/SpotiNoAds.exe"><img src="https://img.shields.io/badge/Descargar-SpotiNoAds.exe-a6da95?colorA=363a4f&style=for-the-badge&logo=windows&logoColor=a6da95"></a>
+  <a href="https://github.com/hypeblock26/SpotiNoAds/releases/latest/download/SpotiNoAds.exe"><img src="https://img.shields.io/badge/Download-SpotiNoAds.exe-a6da95?colorA=363a4f&style=for-the-badge&logo=windows&logoColor=a6da95"></a>
 </p>
 
 <p align="center"> •
-  <a href="#que-hace">Qué hace</a> •
-  <a href="#requisitos">Requisitos</a> •
-  <a href="#instalacion">Instalación</a> •
-  <a href="#uso">Uso</a> •
+  <a href="#what-it-does">What it does</a> •
+  <a href="#requirements">Requirements</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
   <a href="#presets">Presets</a> •
-  <a href="#restaurar">Restaurar</a> •
-  <a href="#faq">Preguntas frecuentes</a> •
-  <a href="#aviso">Aviso</a>
+  <a href="#restore">Restore</a> •
+  <a href="#faq">FAQ</a> •
+  <a href="#disclaimer">Disclaimer</a>
 </p>
 
-<h1 id="que-hace">Qué hace</h1>
+<h1 id="what-it-does">What it does</h1>
 
-- **Bloquea anuncios** de banner, video y audio en el cliente de escritorio
-- **Oculta podcasts, episodios y audiolibros** del inicio (opcional)
-- **Bloquea las actualizaciones automáticas** de Spotify para que el parche no se pierda (opcional)
-- **Reinstalación limpia** que borra Spotify por completo antes de instalarlo de nuevo
-- **Botón de restaurar** que quita el parche y deja Spotify como estaba
+- **Blocks ads** (banner, video and audio) in the desktop client
+- **Hides podcasts, episodes and audiobooks** from the home page (optional)
+- **Blocks automatic Spotify updates** so the patch isn't lost (optional)
+- **Clean reinstall** that completely removes Spotify before installing it again
+- **Restore button** that removes the patch and leaves Spotify as it was
 
-<h1 id="requisitos">Requisitos</h1>
+<h1 id="requirements">Requirements</h1>
 
-- **Sistema:** Windows 10 o 11
-- **Internet:** el programa descarga Spotify y los archivos del parche al instalar
-- **Spotify:** no hace falta tenerlo instalado, si no lo tienes el programa lo instala. La versión de Microsoft Store no sirve; el programa puede desinstalarla por ti
+- **System:** Windows 10 or 11
+- **Internet:** the program downloads Spotify and the patch files during installation
+- **Spotify:** you don't need to have it installed; if you don't, the program installs it. The Microsoft Store version doesn't work, but the program can uninstall it for you
 
-<h1 id="instalacion">Instalación</h1>
+<h1 id="installation">Installation</h1>
 
-1. Dale al botón **Descargar** de arriba para bajar `SpotiNoAds.exe`. También puedes ir a [Releases](https://github.com/hypeblock26/SpotiNoAds/releases/latest).
-2. Haz doble clic para abrirlo. No necesitas instalar nada más.
+1. Click the **Download** button above to get `SpotiNoAds.exe`. You can also go to [Releases](https://github.com/hypeblock26/SpotiNoAds/releases/latest).
+2. Double-click it to open it. You don't need to install anything else.
 
-> **Windows SmartScreen:** como el programa no está firmado, puede salir "Windows protegió su PC". Dale a **Más información → Ejecutar de todos modos**.
+> **Windows SmartScreen:** since the program isn't signed, you may see "Windows protected your PC". Click **More info → Run anyway**.
 >
-> **Antivirus:** algunos pueden marcarlo como sospechoso porque modifica archivos de Spotify. Es un falso positivo.
+> **Antivirus:** some may flag it as suspicious because it modifies Spotify files. This is a false positive.
 
 <details>
-<summary>Ejecutarlo desde el código</summary>
+<summary>Run it from source</summary>
 
 <br/>
 
-Necesitas Python 3.8 o superior.
+You need Python 3.8 or later.
 
 ```
 pip install customtkinter
@@ -71,52 +79,52 @@ python spotify_gui.py
 
 </details>
 
-<h1 id="uso">Uso</h1>
+<h1 id="usage">Usage</h1>
 
-1. Cierra Spotify.
-2. Abre SpotiNoAds.
-3. Elige un preset o marca las opciones que quieras en las pestañas **Básico** y **Avanzado**.
-4. Dale a **Instalar / Actualizar**, acepta el aviso y espera a que el log diga **Terminó correctamente**.
+1. Close Spotify.
+2. Open SpotiNoAds.
+3. Pick a preset, or check the options you want in the **Básico** (Basic) and **Avanzado** (Advanced) tabs.
+4. Click **Instalar / Actualizar** (Install / Update), accept the prompt, and wait until the log says **Terminó correctamente** (Finished successfully).
 
-El bloqueo de anuncios siempre está activo, no tiene casilla. Las casillas son cambios extra: **Ocultar podcasts**, por ejemplo, los quita del inicio, y si no la marcas se quedan.
+Ad blocking is always on and has no checkbox. The checkboxes are extra changes: **Ocultar podcasts** (Hide podcasts), for example, removes them from the home page, and if you leave it unchecked they stay.
 
-> Si quieres que se agreguen exclusiones a Microsoft Defender, abre el programa con clic derecho → **Ejecutar como administrador** y marca la opción en la pestaña **Avanzado**.
+> If you want Microsoft Defender exclusions to be added, open the program with right-click → **Run as administrator** and check the option in the **Avanzado** tab.
 
 <h1 id="presets">Presets</h1>
 
-| Preset | Qué hace |
+| Preset | What it does |
 |---|---|
-| **Normal** | Tema nuevo |
-| **Completa** | Tema nuevo, sin podcasts, sin secciones tipo anuncio, actualizaciones bloqueadas, abre Spotify al terminar y quita la versión de Microsoft Store si existe |
-| **Premium** | Tema nuevo, sin bloquear anuncios (solo los de audio en podcasts). Para cuentas de pago |
-| **Tema viejo** | Instala la versión 1.2.13 con el diseño anterior y bloquea las actualizaciones |
+| **Normal** | New theme |
+| **Completa** (Full) | New theme, no podcasts, no ad-like sections, updates blocked, opens Spotify when done, and removes the Microsoft Store version if present |
+| **Premium** | New theme, ads not blocked (only the audio ads in podcasts). For paid accounts |
+| **Tema viejo** (Old theme) | Installs version 1.2.13 with the previous design and blocks updates |
 
-<h1 id="restaurar">Restaurar</h1>
+<h1 id="restore">Restore</h1>
 
-El botón **Restaurar (quitar parche)** cierra Spotify y devuelve los archivos originales. No elimina las exclusiones de Defender ni los accesos directos.
+The **Restaurar (quitar parche)** (Restore, remove patch) button closes Spotify and puts the original files back. It doesn't remove Defender exclusions or shortcuts.
 
-Cierra Spotify del todo antes de usarlo, también desde la bandeja del sistema, junto al reloj. Si no, Windows no deja reemplazar los archivos.
+Fully close Spotify before using it, including from the system tray next to the clock. Otherwise Windows won't let the files be replaced.
 
-<h1 id="faq">Preguntas frecuentes</h1>
+<h1 id="faq">FAQ</h1>
 
-**Spotify abre en negro o no carga después de instalar.**
-Pasa cuando el parche no coincide con la versión que tenías. Abre SpotiNoAds, ve a **Avanzado**, marca **Reinstalación limpia** y vuelve a instalar. Esto borra Spotify por completo, incluidos sus ajustes y descargas sin conexión, así que tendrás que iniciar sesión otra vez.
+**Spotify opens black or doesn't load after installing.**
+This happens when the patch doesn't match the version you had. Open SpotiNoAds, go to **Avanzado**, check **Reinstalación limpia** (Clean reinstall) and install again. This removes Spotify completely, including its settings and offline downloads, so you'll have to log in again.
 
-**Los anuncios volvieron.**
-Spotify se actualizó y borró el parche. Vuelve a instalar y marca **Bloquear actualizaciones** para que no se repita.
+**The ads came back.**
+Spotify updated and wiped the patch. Install again and check **Bloquear actualizaciones** (Block updates) so it doesn't happen again.
 
-**Salen líneas que dicen `Didn't find variable ...` en el log.**
-Son avisos. Algunos parches opcionales no encontraron dónde aplicarse en esa versión y el programa sigue con los demás.
+**I see lines saying `Didn't find variable ...` in the log.**
+These are warnings. Some optional patches couldn't find where to apply in that version, and the program continues with the rest.
 
-**Quiero seguir viendo podcasts y audiolibros.**
-No marques **Ocultar podcasts / episodios / audiolibros**. Si usas el preset **Completa**, desmárcala después de elegirlo.
+**I want to keep seeing podcasts and audiobooks.**
+Don't check **Ocultar podcasts / episodios / audiolibros** (Hide podcasts / episodes / audiobooks). If you use the **Completa** preset, uncheck it after selecting the preset.
 
-<h1 id="aviso">Aviso</h1>
+<h1 id="disclaimer">Disclaimer</h1>
 
-Este programa modifica archivos del cliente de Spotify (parchea binarios y quita firmas), así que úsalo bajo tu propio riesgo. Algunos antivirus pueden marcarlo como sospechoso por esto.
+This program modifies files of the Spotify client (it patches binaries and removes signatures), so use it at your own risk. Some antivirus programs may flag it as suspicious because of this.
 
-SpotiNoAds no está afiliado a Spotify AB ni cuenta con su respaldo. Spotify es una marca registrada de sus dueños.
+SpotiNoAds is not affiliated with or endorsed by Spotify AB. Spotify is a registered trademark of its respective owners.
 
-<h1 id="licencia">Licencia</h1>
+<h1 id="license">License</h1>
 
-Consulta el archivo [LICENSE](LICENSE).
+See the [LICENSE](LICENSE) file.
