@@ -1,3 +1,4 @@
+
 <h1 align="center">SpotiNoAds</h1>
 
 <p align="center">
@@ -18,6 +19,10 @@
     <img src="https://img.shields.io/badge/powershell-5.1%2B-a6da95?colorA=363a4f&style=for-the-badge&logo=powershell&logoColor=a6da95">
 </p>
 
+<p align="center">
+  <a href="https://github.com/hypeblock26/SpotiNoAds/releases/latest/download/SpotiNoAds.exe"><img src="https://img.shields.io/badge/Descargar-SpotiNoAds.exe-a6da95?colorA=363a4f&style=for-the-badge&logo=windows&logoColor=a6da95"></a>
+</p>
+
 <p align="center"> •
   <a href="#que-hace">Qué hace</a> •
   <a href="#requisitos">Requisitos</a> •
@@ -34,8 +39,6 @@
 - **Bloquea anuncios** de banner, video y audio en el cliente de escritorio
 - **Oculta podcasts, episodios y audiolibros** del inicio (opcional)
 - **Bloquea las actualizaciones automáticas** de Spotify para que el parche no se pierda (opcional)
-- **Presets listos** para instalar con un clic, y una pestaña avanzada para ajustar cada opción
-- **Preguntas en ventanas** de Sí/No, sin escribir nada en una consola
 - **Reinstalación limpia** que borra Spotify por completo antes de instalarlo de nuevo
 - **Botón de restaurar** que quita el parche y deja Spotify como estaba
 
@@ -47,10 +50,10 @@
 
 <h1 id="instalacion">Instalación</h1>
 
-1. Ve a [Releases](https://github.com/hypeblock26/SpotiNoAds/releases) y descarga `SpotiNoAds.exe`.
+1. Dale al botón **Descargar** de arriba para bajar `SpotiNoAds.exe`. También puedes ir a [Releases](https://github.com/hypeblock26/SpotiNoAds/releases/latest).
 2. Haz doble clic para abrirlo. No necesitas instalar nada más.
 
-> **Windows SmartScreen:** como el programa no está firmado, puede salir "Windows protegió su PC". Dale a **Más información → Ejecutar de todas formas**.
+> **Windows SmartScreen:** como el programa no está firmado, puede salir "Windows protegió su PC". Dale a **Más información → Ejecutar de todos modos**.
 >
 > **Antivirus:** algunos pueden marcarlo como sospechoso porque modifica archivos de Spotify. Es un falso positivo.
 
