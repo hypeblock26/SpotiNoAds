@@ -12,7 +12,7 @@ from pathlib import Path
 import customtkinter as ctk
 from tkinter import messagebox
 
-APP_DIR = Path(sys.executable).parent if getattr(sys, "frozen", False) else Path(__file__).resolve().parent
+APP_DIR = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent))
 OLD_THEME_VERSION = "1.2.13.661.ga588f749"
 NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
